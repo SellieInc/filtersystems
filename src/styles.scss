@@ -1,1 +1,155 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+// Define global colors using SCSS variables
+$primary-color: #AD1919;
+$accent-color: #FFB300;  // Amber
+$warn-color: #FF5722;
+$background-color: #EEEEEE;
+
+// Define CSS custom properties for global use
+:root {
+  --primary-color: #AD1919;
+  --accent-color: #FFB300;
+  --warn-color: #FF5722;
+  --background-color: #EEEEEE;
+}
+
+// Custom primary palette
+$primary-palette: mat.define-palette((
+  50: #ffebee,
+  100: #ffcdd2,
+  200: #ef9a9a,
+  300: #e57373,
+  400: #ef5350,
+  500: $primary-color,
+  600: #e53935,
+  700: #d32f2f,
+  800: #c62828,
+  900: #b71c1c,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #d50000,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #ffffff,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+));
+
+// Custom accent palette
+$accent-palette: mat.define-palette((
+  50: #fff8e1,
+  100: #ffecb3,
+  200: #ffe082,
+  300: #ffd54f,
+  400: #ffca28,
+  500: $accent-color,
+  600: #ffa000,
+  700: #ff8f00,
+  800: #ff6f00,
+  900: #ff8f00,
+  A100: #ffd180,
+  A200: #ffab40,
+  A400: #ff9100,
+  A700: #ff6d00,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+));
+
+// Custom warn palette
+$warn-palette: mat.define-palette((
+  50: #ffebee,
+  100: #ffcdd2,
+  200: #ef9a9a,
+  300: #e57373,
+  400: #ef5350,
+  500: $warn-color,
+  600: #e53935,
+  700: #d32f2f,
+  800: #c62828,
+  900: #b71c1c,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #d50000,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #ffffff,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+));
+
+// Custom theme
+$custom-theme: mat.define-light-theme((
+  color: (
+    primary: $primary-palette,
+    accent: $accent-palette,
+    warn: $warn-palette
+  ),
+  background: (
+    default: $background-color,
+    app-bar: #E0E0E0,
+    background: #FAFAFA,
+    card: #FFFFFF,
+    dialog: #FFFFFF,
+    disabled-button: #BDBDBD,
+    raised-button: #FFFFFF,
+    focused-button: #FFFFFF,
+    selected-button: #E0E0E0,
+    selected-disabled-button: #E0E0E0,
+    disabled-button-toggle: #E0E0E0,
+    unselected-chip: #BDBDBD,
+    disabled-list-option: mat.$grey-palette[300]
+  )
+));
+
+// Apply the custom theme
+@include mat.all-component-themes($custom-theme);
+
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

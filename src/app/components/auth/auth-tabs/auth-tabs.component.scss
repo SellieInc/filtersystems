@@ -1,0 +1,43 @@
+.auth-card {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.icon-placeholder {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  margin: 0 auto 20px;
+}
+
+.welcome-message {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #555;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer-message {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+.footer-message a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-message a:hover {
+  text-decoration: underline;
+}

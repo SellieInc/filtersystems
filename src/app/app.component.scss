@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    overflow: hidden; // Prevent body scrolling
+  }
+  
+  main {
+    margin-top: 50px;  // Adjust for the navbar height
+    height: calc(100vh - 50px); // Full height minus navbar height
+    overflow-y: auto;   // Enable vertical scrolling within the main content
+    padding: 20px;      // Add padding for comfortable content spacing
+  }
+  
